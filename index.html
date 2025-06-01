@@ -24,15 +24,7 @@
       padding: 2rem 1rem;
       background-color: #fff;
     }
-    .intro h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .intro p {
-      font-size: 1.2rem;
-      color: #333;
-    }
-    .features, .variants, .contact, .disclaimer {
+    .features, .variants, .contact, .disclaimer, .form-section {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
@@ -52,6 +44,9 @@
     .variant h2 {
       margin-top: 0;
     }
+    .variant p {
+      margin: 0.5rem 0;
+    }
     .variant a button {
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
@@ -61,6 +56,30 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
+    }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    form input, form select {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      background-color: #111;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
     }
     footer {
       background-color: #eee;
@@ -97,18 +116,38 @@
     <div class="variant">
       <h2>HeatBox Pro – Basic (€45)</h2>
       <p>Includes the heated box only. No USB cable, no external thermometer.</p>
+      <p><strong>Shipping:</strong> + €4.95 (BE) / €6.95 (NL)</p>
       <a href="https://www.paypal.com/ncp/payment/LH8PV2CPWZ54L" target="_blank"><button>Buy Now</button></a>
     </div>
     <div class="variant">
       <h2>HeatBox Pro – Complete (€49)</h2>
       <p>Includes 20cm USB cable and external thermometer – fully plug & play.</p>
+      <p><strong>Shipping:</strong> + €4.95 (BE) / €6.95 (NL)</p>
       <a href="https://www.paypal.com/ncp/payment/SXJKG27A6TA22" target="_blank"><button>Buy Now</button></a>
     </div>
     <div class="variant">
       <h2>HeatBox Pro – Custom Edition (€57)</h2>
       <p>Fully equipped set with your name/logo on the box and a custom color of your choice.</p>
+      <p><strong>Shipping:</strong> + €4.95 (BE) / €6.95 (NL)</p>
       <a href="https://www.paypal.com/ncp/payment/LP4WJSEEHESA4" target="_blank"><button>Buy Now</button></a>
     </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Already paid? Fill in your shipping details below</h2>
+    <p>Thank you for your order! To process your delivery, please complete the form below:</p>
+    <form action="https://formspree.io/f/mkgbwylj" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="address" placeholder="Shipping Address" required />
+      <input type="text" name="zip" placeholder="Postal Code & City" required />
+      <select name="country" required>
+        <option value="">Select Country</option>
+        <option value="Belgium">Belgium</option>
+        <option value="Netherlands">Netherlands</option>
+      </select>
+      <button type="submit">Submit Shipping Info</button>
+    </form>
   </section>
 
   <section class="contact">
