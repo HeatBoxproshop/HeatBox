@@ -19,17 +19,12 @@
       padding: 2rem;
       text-align: center;
     }
-    .intro {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #fff;
-    }
-    .features, .variants, .contact, .disclaimer, .form-section {
+    .intro, .features, .variants, .delivery, .form-section, .contact, .disclaimer {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    .features ul {
+    .features ul, .delivery ul {
       list-style: disc;
       padding-left: 1.5rem;
     }
@@ -41,7 +36,7 @@
       margin-bottom: 1.5rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    .variant h2 {
+    .variant h2, .delivery h2 {
       margin-top: 0;
     }
     .variant p {
@@ -63,11 +58,11 @@
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    form input, form select {
+    form input, form select, form button {
       display: block;
       width: 100%;
       margin-bottom: 1rem;
-      padding: 0.5rem;
+      padding: 0.75rem;
       font-size: 1rem;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -75,11 +70,7 @@
     form button {
       background-color: #111;
       color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
       cursor: pointer;
-      font-size: 1rem;
     }
     footer {
       background-color: #eee;
@@ -89,10 +80,23 @@
     }
   </style>
 </head>
-<body>
+
+  <body>
+    <nav style="background:#fff; padding:1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:10;">
+      <div style="max-width: 900px; margin:auto; display:flex; justify-content: space-between; align-items:center;">
+        <div><img src="logo.png" alt="Logo" style="height:40px;"></div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="#variants" style="text-decoration:none; color:#111;">Products</a>
+          <a href="#delivery" style="text-decoration:none; color:#111;">Shipping</a>
+          <a href="#form" style="text-decoration:none; color:#111;">Your Order</a>
+          <a href="#contact" style="text-decoration:none; color:#111;">Contact</a>
+        </div>
+      </div>
+    </nav>
+
   <header>
     <img src="logo.png" alt="HeatBox Pro logo" style="max-height: 80px; margin-bottom: 0.5rem;" />
-<h1>HeatBox Pro</h1>
+    <h1>HeatBox Pro</h1>
     <p>Smart Heat for Every Setup</p>
   </header>
 
@@ -113,7 +117,7 @@
     </ul>
   </section>
 
-  <section class="variants">
+  <section class="variants" id="variants">
     <div class="variant">
       <h2>HeatBox Pro – Basic (€45)</h2>
       <p>Includes the heated box only. No USB cable, no external thermometer.</p>
@@ -134,7 +138,17 @@
     </div>
   </section>
 
-  <section class="form-section">
+  <section class="delivery" id="delivery">
+    <h2>Shipping & Delivery</h2>
+    <p>Orders placed before <strong>16:00</strong> are processed the same day.</p>
+    <ul>
+      <li><strong>Belgium:</strong> 2–3 business days</li>
+      <li><strong>Netherlands:</strong> 3–5 business days</li>
+    </ul>
+    <p>All products are handmade and shipped from Belgium.</p>
+  </section>
+
+  <section class="form-section" id="form">
     <h2>Already paid? Fill in your shipping details below</h2>
     <p>Thank you for your order! To process your delivery, please complete the form below:</p>
     <form action="https://formspree.io/f/mkgbwylj" method="POST">
@@ -151,7 +165,7 @@
     </form>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>Contact</h2>
     <p>Questions or custom requests? Reach us at <strong>heatboxproshop@gmail.com</strong></p>
   </section>
@@ -164,5 +178,13 @@
   <footer>
     <p>&copy; 2025 HeatBox Pro. All rights reserved.</p>
   </footer>
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
+          style="position:fixed;bottom:30px;right:30px;padding:0.75rem 1rem;
+                 background:#111;color:#fff;border:none;border-radius:6px;
+                 cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,0.3);">
+    ↑ Top
+  </button>
+
 </body>
 </html>
