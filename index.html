@@ -32,24 +32,27 @@
       font-size: 1.2rem;
       color: #333;
     }
-    .variants {
-      display: grid;
-      gap: 1.5rem;
+    .features, .variants, .contact, .disclaimer {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
+    }
+    .features ul {
+      list-style: disc;
+      padding-left: 1.5rem;
     }
     .variant {
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 12px;
       padding: 1.5rem;
+      margin-bottom: 1.5rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
     .variant h2 {
       margin-top: 0;
     }
-    .variant button {
+    .variant a button {
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
@@ -58,20 +61,6 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
-    }
-    .payment {
-      text-align: center;
-      margin: 3rem auto;
-      max-width: 600px;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    .contact, .disclaimer {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
     }
     footer {
       background-color: #eee;
@@ -88,56 +77,52 @@
   </header>
 
   <section class="intro">
-    <h1>Welkom bij HeatBox Pro</h1>
-    <p>Dé oplossing om jouw gear, elektronica of magazijnen warm en klaar te houden met één simpele plug & play box.</p>
+    <h1>Welcome to HeatBox Pro</h1>
+    <p>The all-in-one plug & play solution to keep your gear, electronics, or magazines warm and ready — anywhere.</p>
+  </section>
+
+  <section class="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Powered by USB-C (5V)</li>
+      <li>Built-in thermostat with temperature control</li>
+      <li>Compact and durable 3D-printed design</li>
+      <li>Pre-assembled and tested – ready to use</li>
+      <li>Perfect for airsoft, electronics, and DIY use</li>
+      <li><strong>Standard color: black</strong>. Other colors available with custom orders.</li>
+    </ul>
   </section>
 
   <section class="variants">
     <div class="variant">
       <h2>HeatBox Pro – Basic (€45)</h2>
-      <p>Enkel de verwarmde box, zonder USB-kabel en zonder externe thermometer.</p>
-      <button onclick="document.getElementById('payment').scrollIntoView({behavior: 'smooth'})">Bestel deze variant</button>
+      <p>Includes the heated box only. No USB cable, no external thermometer.</p>
+      <a href="https://www.paypal.com/ncp/payment/LH8PV2CPWZ54L" target="_blank"><button>Buy Now</button></a>
     </div>
     <div class="variant">
       <h2>HeatBox Pro – Complete (€49)</h2>
-      <p>Inclusief USB-kabel (20 cm) en externe thermometer – volledig gebruiksklaar.</p>
-      <button onclick="document.getElementById('payment').scrollIntoView({behavior: 'smooth'})">Bestel deze variant</button>
+      <p>Includes 20cm USB cable and external thermometer – fully plug & play.</p>
+      <a href="https://www.paypal.com/ncp/payment/SXJKG27A6TA22" target="_blank"><button>Buy Now</button></a>
     </div>
     <div class="variant">
-      <h2>HeatBox Pro – Custom Edition (€55–59)</h2>
-      <p>Complete set met jouw naam of logo op de box + kleur naar keuze.</p>
-      <button onclick="document.getElementById('payment').scrollIntoView({behavior: 'smooth'})">Bestel deze variant</button>
-    </div>
-  </section>
-
-  <section id="payment" class="payment">
-    <h2>Kies je betaalmethode</h2>
-    <p>Betaal veilig via PayPal of via het bestelformulier.</p>
-    <div>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ARjNJVoDkxyYlYxO-X3a7iFrHF7TNF1rjepi7nRcEz63rJ3ydg_jY8svDZ6VysVloU06wMGaihXvtNib">
-        <button type="submit">Betaal via PayPal</button>
-      </form>
-      <p style="margin: 1rem 0;">of</p>
-      <a href="https://formspree.io/f/mkgbwylj" target="_blank">
-        <button>Bestel via formulier</button>
-      </a>
+      <h2>HeatBox Pro – Custom Edition (€57)</h2>
+      <p>Fully equipped set with your name/logo on the box and a custom color of your choice.</p>
+      <a href="https://www.paypal.com/ncp/payment/LP4WJSEEHESA4" target="_blank"><button>Buy Now</button></a>
     </div>
   </section>
 
   <section class="contact">
-    <h2>Contact & Info</h2>
-    <p>Vragen? Mail naar <strong>heatboxproshop@gmail.com</strong></p>
+    <h2>Contact</h2>
+    <p>Questions or custom requests? Reach us at <strong>heatboxproshop@gmail.com</strong></p>
   </section>
 
   <section class="disclaimer">
     <h2>Disclaimer</h2>
-    <p>Dit product is handgemaakt en niet officieel CE-gekeurd. Gebruik op eigen risico. Enkel bedoeld voor hobbymatig gebruik onder toezicht.</p>
+    <p>This product is handcrafted and not officially CE-certified. It is intended for supervised hobby use only. Use at your own risk.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 HeatBox Pro. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025 HeatBox Pro. All rights reserved.</p>
   </footer>
 </body>
 </html>
