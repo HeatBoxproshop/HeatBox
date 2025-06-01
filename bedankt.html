@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You - HeatBox Pro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+    .container {
+      max-width: 700px;
+      margin: 4rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #111;
+    }
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    form {
+      margin-top: 2rem;
+    }
+    input, select, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thank You for Your Purchase!</h1>
+    <p>Please fill in your shipping details so we can send your HeatBox Pro.</p>
+    <form action="https://formspree.io/f/mkgbwylj" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="address" placeholder="Shipping Address" required />
+      <input type="text" name="zip" placeholder="Postal Code & City" required />
+      <select name="country" required>
+        <option value="">Select Country</option>
+        <option value="Belgium">Belgium</option>
+        <option value="Netherlands">Netherlands</option>
+      </select>
+      <button type="submit">Submit Shipping Info</button>
+    </form>
+  </div>
+</body>
+</html>
