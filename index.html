@@ -1,1 +1,143 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeatBox Pro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #000;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .intro {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #fff;
+    }
+    .intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .variants {
+      display: grid;
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .variant {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .variant h2 {
+      margin-top: 0;
+    }
+    .variant button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .payment {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 600px;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .contact, .disclaimer {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    footer {
+      background-color: #eee;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HeatBox Pro</h1>
+    <p>Smart Heat for Every Setup</p>
+  </header>
+
+  <section class="intro">
+    <h1>Welkom bij HeatBox Pro</h1>
+    <p>Dé oplossing om jouw gear, elektronica of magazijnen warm en klaar te houden met één simpele plug & play box.</p>
+  </section>
+
+  <section class="variants">
+    <div class="variant">
+      <h2>HeatBox Pro – Basic (€45)</h2>
+      <p>Enkel de verwarmde box, zonder USB-kabel en zonder externe thermometer.</p>
+      <button onclick="document.getElementById('payment').scrollIntoView({behavior: 'smooth'})">Bestel deze variant</button>
+    </div>
+    <div class="variant">
+      <h2>HeatBox Pro – Complete (€49)</h2>
+      <p>Inclusief USB-kabel (20 cm) en externe thermometer – volledig gebruiksklaar.</p>
+      <button onclick="document.getElementById('payment').scrollIntoView({behavior: 'smooth'})">Bestel deze variant</button>
+    </div>
+    <div class="variant">
+      <h2>HeatBox Pro – Custom Edition (€55–59)</h2>
+      <p>Complete set met jouw naam of logo op de box + kleur naar keuze.</p>
+      <button onclick="document.getElementById('payment').scrollIntoView({behavior: 'smooth'})">Bestel deze variant</button>
+    </div>
+  </section>
+
+  <section id="payment" class="payment">
+    <h2>Kies je betaalmethode</h2>
+    <p>Betaal veilig via PayPal of via het bestelformulier.</p>
+    <div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ARjNJVoDkxyYlYxO-X3a7iFrHF7TNF1rjepi7nRcEz63rJ3ydg_jY8svDZ6VysVloU06wMGaihXvtNib">
+        <button type="submit">Betaal via PayPal</button>
+      </form>
+      <p style="margin: 1rem 0;">of</p>
+      <a href="https://formspree.io/f/mkgbwylj" target="_blank">
+        <button>Bestel via formulier</button>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact & Info</h2>
+    <p>Vragen? Mail naar <strong>heatboxproshop@gmail.com</strong></p>
+  </section>
+
+  <section class="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>Dit product is handgemaakt en niet officieel CE-gekeurd. Gebruik op eigen risico. Enkel bedoeld voor hobbymatig gebruik onder toezicht.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HeatBox Pro. Alle rechten voorbehouden.</p>
+  </footer>
+</body>
+</html>
